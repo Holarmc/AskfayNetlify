@@ -7,7 +7,9 @@
     "build": "remix build",
     "dev": "remix dev",
     "start": "netlify serve",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "css-build": "npx tailwindcss -i ./app/css/input.css -o ./app/css/output.css --watch"
+
   },
   "dependencies": {
     "@netlify/functions": "^2.0.0",
@@ -26,6 +28,7 @@
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.27.0",
     "netlify-cli": "^17.15.3",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2"
   },
   "engines": {
