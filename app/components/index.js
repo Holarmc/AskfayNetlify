@@ -1,8 +1,6 @@
-import NavBar from "./NavBar"
-import Search from "./Search"
+import Footer from "./Footer";
+import Header from "./Header";
+import Aside from "./Aside";
+import ComboBoxResponsive from "./ComboBoxResponsive";
 
-
-export {
-    NavBar,
-    Search,
-}
+export { Footer, Header, Aside, ComboBoxResponsive };
