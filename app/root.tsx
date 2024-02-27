@@ -29,8 +29,8 @@ export default function App() {
           <Header />
 
           <Aside />
-          <ComboBoxResponsive />
           <Outlet />
+          <ComboBoxResponsive />
 
           <Footer />
         </div>

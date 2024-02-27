@@ -1,14 +1,13 @@
 import { Link, NavLink } from "@remix-run/react";
 
 import Aside from "./AsideMobile";
+import Logo from "../assets/Logo";
 
 const NavBar = () => {
   return (
     <div className="flex justify-between items-center py-8">
       <Aside />
-      <div className="font-black text-pink">
-        <Link to={`/`}>AskFAY</Link>
-      </div>
+       <Logo />
       <nav role="navigation">
         <ul className="flex justify-between gap-x-10">
           <li className="hidden md:inline-flex font-normal">
