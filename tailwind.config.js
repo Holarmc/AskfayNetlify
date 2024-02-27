@@ -9,7 +9,12 @@ export default {
       black60: "#12121299",
       black40: "#12121266",
       gray: "#FAFAFA",
+      gray900: "#111827",
       light: "#FFF",
+      "slate-400": "#94A3B8",
+      "slate-900": "#0F172A",
+      "slate-200": "#E2E8F0",
+      transparent: "transparent",
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],

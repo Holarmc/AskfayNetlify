@@ -1,37 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap');
-
-
-
-
-/* layout styles for the pages */
-
-header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-}
-
-aside {
-    grid-area: aside;
-}
-
-footer {
-    grid-area: footer;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header header header header"
-    "main main main main"
-    "footer footer footer footer"
-    ;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap");
 
 @tailwind base;
 @tailwind components;
