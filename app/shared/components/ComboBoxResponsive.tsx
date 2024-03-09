@@ -81,7 +81,7 @@ export default function ComboBoxResponsive() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           aria-label="filter"
-          className="absolute right-3 top-1/2 -mt-2.5 mr-[15%] md:hidden"
+          className="absolute right-3 top-1/2 -mt-2.5 mr-[20%] md:hidden"
         >
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g
