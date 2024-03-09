@@ -1,5 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Form } from "@remix-run/react";
 
+// import { Button } from "~/shared/components/Button";
 export const meta: MetaFunction = () => {
   return [
     { title: "AskFay" },
@@ -16,6 +18,8 @@ export default function Index() {
     //Todo:
     //Adjust the css to allow for complete grid span of the main
 
-    <h2 className="text-sm text-slate-200">Hello there!</h2>
+    <div>
+      <h2 className="text-sm">Hello there!</h2>
+    </div>
   );
 }
