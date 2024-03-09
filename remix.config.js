@@ -1,4 +1,5 @@
 import { config } from "@netlify/remix-adapter";
+import { flatRoutes } from "remix-flat-routes";
 
 /** @type {import('@remix-run/dev').AppConfig} */
 export default {
@@ -9,4 +10,8 @@ export default {
   // See https://remix.run/file-conventions/remix-config
   tailwind: true,
   postcss: true,
+  ignoredRouteFiles: ["**/*"],
+  routes: async (defineRoutes) => {
+    return flatRoutes("routes", defineRoutes);
+  },
 };

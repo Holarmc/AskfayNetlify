@@ -1,19 +1,21 @@
 const Footer = () => {
+  const date = new Date();
+  let year = date.getFullYear();
   return (
-    <footer className="col-start-1 col-end-13 static bottom-0 left-0 bg-light p-2 ">
+    <footer className="col-start-1 col-end-13 static bottom-0 left-0  p-2 ">
       <div className="flex flex-col md:flex-row justify-between">
         <section className="justify-center items-left p-2 ">
-          <h2 className="font-black text-pink">AskFAY</h2>
+          <h2 className="font-black text-pink-200">AskFAY</h2>
 
-          <p className="p-x-4 text-black01 font-normal text-sm max-w-52 leading-loose">
+          <p className="p-x-4 text-black-100 font-normal text-sm max-w-52 leading-loose">
             Revolutionizing the delivery of SRH information and services to
             reach young people at scale
           </p>
         </section>
         <section className="justify-center items-left p-2">
-          <h2 className="font-medium text-black60">INFROMATION</h2>
+          <h2 className="font-medium text-slate-600">INFROMATION</h2>
 
-          <nav className="p-x-4 text-black01 font-normal text-sm">
+          <nav className="p-x-4 text-black-100 font-normal text-sm">
             <ul>
               <li>About us</li>
               <li>Services</li>
@@ -22,8 +24,8 @@ const Footer = () => {
           </nav>
         </section>
         <section className="justify-center items-left p-2">
-          <h2 className="font-medium text-black60">HELPFUL LINKS</h2>
-          <nav className="p-x-4 text-black01 font-normal text-sm">
+          <h2 className="font-medium text-slate-600">HELPFUL LINKS</h2>
+          <nav className="p-x-4 text-black-100 font-normal text-sm">
             <ul>
               <li>FAQ</li>
               <li>Community guidelines</li>
@@ -33,9 +35,9 @@ const Footer = () => {
           </nav>
         </section>
         <section className="justify-center items-left p-2">
-          <h2 className="font-medium text-black60 pb-2">CONTACT US</h2>
+          <h2 className="font-medium text-slate-600 pb-2">CONTACT US</h2>
 
-          <p className="p-x-4 text-black60 font-normal text-sm">
+          <p className="p-x-4 text-black-600 font-normal text-sm">
             <ul className="flex flex-col gap-2">
               <li className="flex gap-x-2 ">
                 <svg
@@ -66,7 +68,7 @@ const Footer = () => {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span className="text-black01">+234 000 000 0000</span>
+                <span className="text-black-100">+234 000 000 0000</span>
               </li>
               <li className="flex gap-x-2">
                 <svg
@@ -93,7 +95,7 @@ const Footer = () => {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <span className="text-black01">askfay@help.ng</span>
+                <span className="text-black-100">askfay@help.ng</span>
               </li>
               <li className="flex justify-left gap-x-4">
                 <span>
@@ -182,8 +184,10 @@ const Footer = () => {
           </p>
         </section>
         <section className="justify-center items-left p-2">
-          <h2 className="hidden md:block font-medium text-black60">Language</h2>
-          <ul className="flex justify-around text-black60 md:flex-col gap-1">
+          <h2 className="hidden md:block font-medium text-slate-600">
+            Language
+          </h2>
+          <ul className="flex justify-around text-black-600 md:flex-col gap-1">
             <li>English</li>
             <li>Hausa</li>
             <li>Yoruba</li>
@@ -193,7 +197,7 @@ const Footer = () => {
         </section>
       </div>
       <div className="text-center font-normal p-4 text-xs">
-        <p>© 2023 | AskFAY | All rights reserved.</p>
+        <p>© {year} | AskFAY | All rights reserved.</p>
       </div>
     </footer>
   );

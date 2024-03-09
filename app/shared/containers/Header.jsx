@@ -1,5 +1,5 @@
-import NavBar from "./NavBar";
-import Search from "./Search";
+import NavBar from "../components/NavBar";
+import Search from "../components/Search";
 
 //Constructing the header section
 const Header = () => {

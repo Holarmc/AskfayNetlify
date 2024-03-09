@@ -1,21 +1,21 @@
-import { Link, NavLink } from "@remix-run/react";
+import { NavLink } from "@remix-run/react";
 
-import Aside from "./AsideMobile";
-import Logo from "../assets/Logo";
+import Hamburger from "./Hamburger";
+import Logo from "~/assets/Logo";
 
 const NavBar = () => {
   return (
     <div className="flex justify-between items-center py-8">
-      <Aside />
-       <Logo />
+      <Hamburger />
+      <Logo />
       <nav role="navigation">
         <ul className="flex justify-between gap-x-10">
           <li className="hidden md:inline-flex font-normal">
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? "text-pink"
-                  : "text-black01 hover:text-pink visited:text-visited"
+                  ? "text-pink-200"
+                  : "text-black-100 hover:text-pink-200 visited:text-visited"
               }
               to={`/services`}
             >
@@ -30,10 +30,10 @@ const NavBar = () => {
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
-                  ? "text-pink"
+                  ? "text-pink-200"
                   : isPending
-                  ? "text-black01"
-                  : "text-black01 hover:text-pink visited:text-visited"
+                  ? "text-black-100"
+                  : "text-black-100 hover:text-pink-200 visited:text-visited"
               }
               to={`/shop`}
             >
@@ -41,14 +41,14 @@ const NavBar = () => {
             </NavLink>
           </li>
 
-          <li className="w-7 h-7 bg-lightpink  border-pink rounded-full relative">
+          <li className="w-7 h-7 bg-pink-100  border-pink-200 rounded-full relative">
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
-                  ? "text-pink"
+                  ? "text-pink-200"
                   : isPending
-                  ? "text-black01"
-                  : "text-black01 hover:text-pink visited:text-visited"
+                  ? "text-black-100"
+                  : "text-black-100 hover:text-pink-200 visited:text-visited"
               }
               to={`/profile`}
             >
@@ -79,10 +79,10 @@ const NavBar = () => {
           <NavLink
             className={({ isActive, isPending }) =>
               isActive
-                ? "text-pink"
+                ? "text-pink-200"
                 : isPending
-                ? "text-black01"
-                : "text-black01 hover:text-pink visited:text-visited"
+                ? "text-black-100"
+                : "text-black-100 hover:text-pink-200 visited:text-visited"
             }
             to={`/cart`}
           >

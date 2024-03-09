@@ -13,8 +13,9 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <main className="grid col-span-full md:col-end-13 md:col-span-8 bg-black40">
-      <h2 className="text-sm text-slate-200">Hello there!</h2>
-    </main>
+    //Todo:
+    //Adjust the css to allow for complete grid span of the main
+
+    <h2 className="text-sm text-slate-200">Hello there!</h2>
   );
 }

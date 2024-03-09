@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import { Header, Footer, Aside, ComboBoxResponsive } from "./components";
+import { Header, Footer } from "./shared";
 
 import styles from "./css/output.css";
 
@@ -24,15 +24,16 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gray font-inter my-2">
+      <body className="bg-gray-100 font-inter my-2">
         <div className="grid grid-cols-12 gap-4 relative container mx-auto max-w-screen-xl px-4">
           <Header />
-
-          <Aside />
           <Outlet />
-          <ComboBoxResponsive />
-
-          <Footer />
+        </div>
+        <hr className="border-1 border-solid border-black-100 mt-1" />
+        <div className="bg-light">
+          <div className="grid grid-cols-12 gap-4 relative container mx-auto max-w-screen-xl px-4 ">
+            <Footer />
+          </div>
         </div>
 
         <ScrollRestoration />
