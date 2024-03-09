@@ -73,7 +73,7 @@ export default function ComboBoxResponsive() {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger
         asChild
-        className="active:transition ease-out delay-150 duration-300"
+        className="active:transition ease-out delay-100 duration-300"
       >
         <svg
           width="24"
