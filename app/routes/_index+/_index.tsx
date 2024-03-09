@@ -19,7 +19,7 @@ export default function Index() {
     //Adjust the css to allow for complete grid span of the main
 
     <div>
-      <h2 className="text-sm">Hello there!</h2>
+      <h2 className="text-sm">Index</h2>
     </div>
   );
 }
