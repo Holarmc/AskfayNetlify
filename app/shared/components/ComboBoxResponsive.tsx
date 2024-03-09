@@ -34,7 +34,6 @@ const contentType = ["Community", "Articles", "Videos", "Images", "Products"];
 export default function ComboBoxResponsive() {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery({ query: "(min-width: 768px)" });
-  // const [selectedStatus, setSelectedStatus] = React.useState<null>(null);
 
   if (isDesktop) {
     return (
@@ -65,7 +64,6 @@ export default function ComboBoxResponsive() {
         </PopoverTrigger>
         <PopoverContent className="w-[200px] p-0 bg-light" align="start">
           <StatusList setOpen={setOpen} />
-          {/* setSelectedStatus={setSelectedStatus} */}
         </PopoverContent>
       </Popover>
     );
