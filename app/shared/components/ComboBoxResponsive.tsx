@@ -15,6 +15,7 @@ import {
 } from "~/shared/components/ui/command";
 import {
   Drawer,
+  DrawerOverlay,
   DrawerContent,
   DrawerTrigger,
 } from "~/shared/components/ui/drawer";
@@ -41,9 +42,9 @@ export default function ComboBoxResponsive() {
         <PopoverTrigger asChild>
           <Button
             variant="default"
-            className="flex-1 w-2/5 justify-start bg-light rounded-none py-2 h-full"
+            className="h-full w-2/5 flex-1 justify-start rounded-none bg-light py-2"
           >
-            <span className="flex text-slate-400 text-sm leading-6 pl-1">
+            <span className="flex pl-1 text-sm leading-6 text-slate-400">
               Filter
               <svg
                 width="24"
@@ -62,7 +63,7 @@ export default function ComboBoxResponsive() {
             </span>
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[200px] p-0 bg-light" align="start">
+        <PopoverContent className="w-[200px] bg-light p-0" align="start">
           <StatusList setOpen={setOpen} />
         </PopoverContent>
       </Popover>
@@ -73,7 +74,7 @@ export default function ComboBoxResponsive() {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger
         asChild
-        className="active:transition ease-out delay-150 duration-300"
+        className="delay-100 duration-300 ease-out active:transition-all"
       >
         <svg
           width="24"
@@ -102,7 +103,8 @@ export default function ComboBoxResponsive() {
           </g>
         </svg>
       </DrawerTrigger>
-      <DrawerContent className="w-full p-2 bg-gray-100">
+
+      <DrawerContent className="w-full bg-gray-100 p-4 delay-200 duration-500  ease-out active:transition-all ">
         <div className="mt-4 border-t">
           <StatusList setOpen={setOpen} />
         </div>
@@ -124,7 +126,7 @@ function StatusList({
           <CommandGroup>
             <Form>
               <section className="p-2 text-sm leading-6">
-                <header className="font-medium text-slate-600 pt-2">
+                <header className="pt-2 font-medium text-slate-600">
                   ORDER BY
                 </header>
                 <main className="flex flex-col gap-1">
@@ -136,7 +138,7 @@ function StatusList({
                           id={order}
                           name="filter-by"
                           value={order}
-                          className="active:bg-pink-200 border-pink-200"
+                          className="border-pink-200 active:bg-pink-200"
                         />
                         <label htmlFor={order}>{order}</label>
                       </span>
@@ -146,7 +148,7 @@ function StatusList({
               </section>
 
               <section className="p-2 text-sm leading-6">
-                <header className="font-medium text-slate-600 pt-2">
+                <header className="pt-2 font-medium text-slate-600">
                   CONTENT BY
                 </header>
                 <main className="flex flex-col gap-1">

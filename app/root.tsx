@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -7,13 +7,33 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import TimeAgo from "javascript-time-ago";
+
+import en from "javascript-time-ago/locale/en";
+import ru from "javascript-time-ago/locale/ru";
+
+TimeAgo.addDefaultLocale(en);
+TimeAgo.addLocale(ru);
 
 import { Header, Footer } from "./shared";
 
 import styles from "./css/output.css";
+// import icons from "~/assets/Icons.svg";
+
+export const meta: MetaFunction = () => {
+  return [
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1.0",
+    },
+  ];
+};
 
 //Linking stylesheet
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
+  // { rel: "preload", href: icons, as: "image", type: "image/svg+xml" },
+];
 
 export default function App() {
   return (
@@ -24,14 +44,14 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gray-100 font-inter my-2">
-        <div className="grid grid-cols-12 gap-4 relative container mx-auto max-w-screen-xl px-4">
+      <body className="my-2 bg-gray-100 font-inter">
+        <div className="container relative mx-auto grid max-w-screen-xl grid-cols-12 gap-4 px-4">
           <Header />
           <Outlet />
         </div>
-        <hr className="border-1 border-solid border-black-100 mt-1" />
+        <hr className="border-1 mt-1 border-solid border-black-100" />
         <div className="bg-light">
-          <div className="grid grid-cols-12 gap-4 relative container mx-auto max-w-screen-xl px-4 ">
+          <div className="container relative mx-auto grid max-w-screen-xl grid-cols-12 gap-4 px-4 ">
             <Footer />
           </div>
         </div>

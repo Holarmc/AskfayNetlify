@@ -4,10 +4,10 @@ import Aside from "~/shared/containers/Aside";
 function Layout() {
   return (
     <>
-      <aside className="hidden md:grid col-start-1 col-span-4 py-4">
+      <div className="col-span-3 col-start-1 hidden  p-2 py-4 md:grid">
         <Aside />
-      </aside>
-      <main className="grid col-span-full md:col-end-13 md:col-span-8 py-4">
+      </div>
+      <main className="col-span-full grid p-2 py-4 md:col-span-9 md:col-end-13">
         <Outlet />
       </main>
     </>

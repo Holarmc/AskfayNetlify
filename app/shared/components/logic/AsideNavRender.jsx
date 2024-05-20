@@ -3,7 +3,7 @@ import {
   serviceMenu,
   serviceProvider,
   topContributors,
-} from "../utils/AsideNavLogic";
+} from "~/shared/utils/AsideNavLogic";
 
 const AsideNavRender = ({ render }) => {
   const data = { serviceMenu, serviceProvider, topContributors };

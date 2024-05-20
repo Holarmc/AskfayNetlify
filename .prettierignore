@@ -1,0 +1,10 @@
+node_modules
+
+app/assets/Icons.jsx
+
+app/assets/*
+
+package-lock.json
+
+package.json
+assets/

@@ -5,17 +5,17 @@ import Logo from "~/assets/Logo";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between items-center py-8">
+    <div className="flex items-center justify-between py-8">
       <Hamburger />
       <Logo />
       <nav role="navigation">
         <ul className="flex justify-between gap-x-10">
-          <li className="hidden md:inline-flex font-normal">
+          <li className="hidden font-normal md:inline-flex" key={"services"}>
             <NavLink
               className={({ isActive }) =>
                 isActive
                   ? "text-pink-200"
-                  : "text-black-100 hover:text-pink-200 visited:text-visited"
+                  : "visited:text-visited text-black-100 hover:text-pink-200"
               }
               to={`/services`}
             >
@@ -26,14 +26,14 @@ const NavBar = () => {
             </Link> */}
           </li>
 
-          <li className="hidden md:inline-flex font-normal ">
+          <li className="hidden font-normal md:inline-flex" key={"shop"}>
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
                   ? "text-pink-200"
                   : isPending
-                  ? "text-black-100"
-                  : "text-black-100 hover:text-pink-200 visited:text-visited"
+                    ? "text-black-100"
+                    : "visited:text-visited text-black-100 hover:text-pink-200"
               }
               to={`/shop`}
             >
@@ -41,14 +41,17 @@ const NavBar = () => {
             </NavLink>
           </li>
 
-          <li className="w-7 h-7 bg-pink-100  border-pink-200 rounded-full relative">
+          <li
+            className="relative h-7 w-7  rounded-full border-pink-200 bg-pink-100"
+            key={"profile"}
+          >
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
                   ? "text-pink-200"
                   : isPending
-                  ? "text-black-100"
-                  : "text-black-100 hover:text-pink-200 visited:text-visited"
+                    ? "text-black-100"
+                    : "visited:text-visited text-black-100 hover:text-pink-200"
               }
               to={`/profile`}
             >
@@ -81,12 +84,12 @@ const NavBar = () => {
               isActive
                 ? "text-pink-200"
                 : isPending
-                ? "text-black-100"
-                : "text-black-100 hover:text-pink-200 visited:text-visited"
+                  ? "text-black-100"
+                  : "visited:text-visited text-black-100 hover:text-pink-200"
             }
             to={`/cart`}
           >
-            <li className="inline-flex gap-x-2">
+            <li className="inline-flex gap-x-2" key={"cart"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
