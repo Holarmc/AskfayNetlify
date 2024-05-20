@@ -1,7 +1,8 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Form } from "@remix-run/react";
+import { type MetaFunction, json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 
-// import { Button } from "~/shared/components/Button";
+import PageFeed from "~/shared/components/ui/pagefeed";
+
 export const meta: MetaFunction = () => {
   return [
     { title: "AskFay" },
@@ -13,13 +14,28 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
-  return (
-    //Todo:
-    //Adjust the css to allow for complete grid span of the main
+export const loader = async () => {
+  return "";
+  // try {
+  //   const data = await fetch(`${process.env.APP_API_BASE_URL}/posts/`, {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: `Bearer ${process.env.APP_API_TOKEN}`,
+  //     },
+  //   }).then((res) => res.json());
+  //   return json(data);
+  // } catch (error) {
+  //   console.log(error);
+  // }
+};
 
-    <div>
-      <h2 className="text-sm">Index</h2>
+export default function Index() {
+  // const {data} = useLoaderData<LoaderData>();
+  // console.log(data);
+  return (
+    <div className="px-2">
+      <PageFeed />
     </div>
   );
 }
