@@ -1,4 +1,4 @@
-import { cva } from "class-variance-authority";
+import { cva } from "className-variance-authority";
 
 export const Button = cva(["font-semibold", "border", "rounded"], {
   variants: {
@@ -27,7 +27,7 @@ export const Button = cva(["font-semibold", "border", "rounded"], {
     {
       intent: "primary",
       size: "medium",
-      class: "uppercase",
+      className: "uppercase",
       // **or** if you're a React.js user, `className` may feel more consistent:
       // className: "uppercase"
     },

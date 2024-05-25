@@ -42,25 +42,27 @@ const topContributors = [
   },
   {
     avatar: "https://i.pravatar.cc/300",
-    name: "Charity",
+    name: "prevalence",
   },
   {
     avatar: "https://i.pravatar.cc/100",
-    name: "Charity",
+    name: "Checking",
   },
   {
     avatar: "https://i.pravatar.cc/400",
-    name: "Charity",
+    name: "people",
   },
 ];
+
+//MAKE SURE THE DATA ITEMS USED AS KEY ARE UNIQUE WHEN QUERIED FROM THE DATABASE.
 
 const Aside = () => {
   return (
     <>
-      <ul className="flex flex-col justify-start gap-4">
-        <div className=" pb-4">
-          {serviceMenu.map((menu) => (
-            <li className="my-4 py-4 first:my-0 first:py-0" key={menu.text}>
+      <div className="flex flex-col justify-start gap-4">
+        {serviceMenu.map((menu) => (
+          <ul className=" pb-4" key={menu.text}>
+            <li className="my-4 py-4 first:my-0 first:py-0">
               <NavLink
                 className={({ isActive }) =>
                   isActive
@@ -75,29 +77,29 @@ const Aside = () => {
                 </span>
               </NavLink>
             </li>
-          ))}
-        </div>
+          </ul>
+        ))}
 
         <div className="pb-4">
           <h2 className="pb-6 font-medium text-slate-600">SERVICE PROVIDERS</h2>
           <ul>
             <li className="pb-1">
-              <div className="h-20 w-20 bg-[url('~/assets/youthExchange.svg')] bg-no-repeat"></div>
+              <span className=" block h-20 w-20 bg-[url('~/assets/youthExchange.svg')] bg-no-repeat"></span>
             </li>
           </ul>
           <ul>
             <li className="pb-1">
-              <div className="h-20 w-20 bg-[url('~/assets/jhpiego.svg')] bg-no-repeat"></div>
+              <span className="block h-20 w-20 bg-[url('~/assets/jhpiego.svg')] bg-no-repeat"></span>
             </li>
           </ul>
           <ul>
             <li className="pb-1">
-              <div className="h-20 w-20 bg-[url('~/assets/familyHealth.svg')] bg-no-repeat"></div>
+              <span className="block h-20 w-20 bg-[url('~/assets/familyHealth.svg')] bg-no-repeat"></span>
             </li>
           </ul>
           <ul>
             <li className="pb-1">
-              <div className="h-20 w-20 bg-[url('~/assets/cphi.svg')] bg-no-repeat"></div>
+              <span className="block h-20 w-20 bg-[url('~/assets/cphi.svg')] bg-no-repeat"></span>
             </li>
           </ul>
         </div>
@@ -105,18 +107,19 @@ const Aside = () => {
         <div className="pb-4">
           <h2 className="pb-6 font-medium text-slate-600">TOP CONTRIBUTORS</h2>
           <ul>
-            <div className="flex justify-start space-x-2">
+            <span className="flex justify-start space-x-2">
               {topContributors.map((contributor) => (
                 <img
+                  key={contributor.name}
                   src={contributor.avatar}
                   alt={contributor.name}
                   className="h-10 w-10 rounded-full bg-slate-100 "
                 />
               ))}
-            </div>
+            </span>
           </ul>
         </div>
-      </ul>
+      </div>
     </>
   );
 };
