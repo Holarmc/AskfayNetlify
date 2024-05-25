@@ -88,6 +88,8 @@ const data = [
   },
 ];
 
+// const date = new Date();
+
 function pagefeed() {
   return (
     <div>
@@ -140,7 +142,7 @@ function pagefeed() {
             </p>
           </div>
 
-          <LastSeen date={new Date()} />
+          <LastSeen date="Sat May 25 2024 19:34:44 GMT+0100 (British Summer Time)" />
 
           <div>
             <p className="mb-10 text-base text-black-100">
