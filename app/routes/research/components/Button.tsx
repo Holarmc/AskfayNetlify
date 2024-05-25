@@ -1,4 +1,4 @@
-import { cva } from "className-variance-authority";
+import { cva } from "class-variance-authority";
 
 export const Button = cva(["font-semibold", "border", "rounded"], {
   variants: {
