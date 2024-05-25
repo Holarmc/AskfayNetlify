@@ -107,7 +107,7 @@ const Aside = () => {
         <div className="pb-4">
           <h2 className="pb-6 font-medium text-slate-600">TOP CONTRIBUTORS</h2>
           <ul>
-            <span className="flex justify-start space-x-2">
+            <li className="flex justify-start space-x-2">
               {topContributors.map((contributor) => (
                 <img
                   key={contributor.name}
@@ -116,7 +116,7 @@ const Aside = () => {
                   className="h-10 w-10 rounded-full bg-slate-100 "
                 />
               ))}
-            </span>
+            </li>
           </ul>
         </div>
       </div>

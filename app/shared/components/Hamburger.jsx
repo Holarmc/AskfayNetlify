@@ -49,36 +49,35 @@ export default function Hamburger() {
           "
         ></span>
 
-        <span className="peer:transition fixed -left-full top-0 z-20 block h-screen w-9/12 overflow-x-hidden overflow-y-scroll bg-light shadow-2xl delay-150 duration-300 ease-out peer-checked:left-0">
-          <nav>
-            <ul className="p-6 pb-4">
-              <div className="mx-auto p-6 text-center">
-                <Logo />
+        <nav className="peer:transition fixed -left-full top-0 z-20 block h-screen w-9/12 overflow-x-hidden overflow-y-scroll bg-light shadow-2xl delay-150 duration-300 ease-out peer-checked:left-0">
+          <ul className="p-6 pb-4">
+            <div className="mx-auto p-6 text-center">
+              <Logo />
+            </div>
+            <div className="mt-8">
+              <div className="py-4">
+                {sideMenu.map((menu) => (
+                  <NavLink
+                    key={menu.text}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-pink-200"
+                        : "visited:text-visited text-black-100 hover:text-pink-200"
+                    }
+                    to={menu.text.toLowerCase()}
+                  >
+                    <li className="py-1 font-medium">{menu.text}</li>
+                  </NavLink>
+                ))}
               </div>
-              <div className="mt-8">
-                <div className="py-4">
-                  {sideMenu.map((menu) => (
-                    <NavLink
-                      key={menu.text}
-                      className={({ isActive }) =>
-                        isActive
-                          ? "text-pink-200"
-                          : "visited:text-visited text-black-100 hover:text-pink-200"
-                      }
-                      to={menu.text.toLowerCase()}
-                    >
-                      <li className="py-1 font-medium">{menu.text}</li>
-                    </NavLink>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-8">
-                <Aside />
-              </div>
-            </ul>
-          </nav>
-        </span>
-        <span className="fixed left-0 top-0 z-10 block hidden h-screen w-screen bg-gray-900 duration-200 peer-checked:block peer-checked:bg-opacity-30 peer-checked:transition "></span>
+            </div>
+            <div className="mt-8">
+              <Aside />
+            </div>
+          </ul>
+        </nav>
+
+        <span className="fixed left-0 top-0 z-10 hidden h-screen w-screen bg-gray-900 duration-200 peer-checked:block peer-checked:bg-opacity-30 peer-checked:transition "></span>
       </label>
     </React.Fragment>
   );

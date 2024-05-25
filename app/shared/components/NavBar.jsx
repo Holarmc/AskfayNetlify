@@ -10,7 +10,7 @@ const NavBar = () => {
       <Logo />
       <nav>
         <ul className="flex justify-between gap-x-10">
-          <li className="hidden font-normal md:inline-flex" key={"services"}>
+          <li className="hidden font-normal md:inline-flex">
             <NavLink
               className={({ isActive }) =>
                 isActive
@@ -26,7 +26,7 @@ const NavBar = () => {
             </Link> */}
           </li>
 
-          <li className="hidden font-normal md:inline-flex" key={"shop"}>
+          <li className="hidden font-normal md:inline-flex">
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
@@ -41,10 +41,7 @@ const NavBar = () => {
             </NavLink>
           </li>
 
-          <li
-            className="relative h-7 w-7  rounded-full border-pink-200 bg-pink-100"
-            key={"profile"}
-          >
+          <li className="relative h-7 w-7  rounded-full border-pink-200 bg-pink-100">
             <NavLink
               className={({ isActive, isPending }) =>
                 isActive
@@ -79,17 +76,17 @@ const NavBar = () => {
             </NavLink>
           </li>
 
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isActive
-                ? "text-pink-200"
-                : isPending
-                  ? "text-black-100"
-                  : "visited:text-visited text-black-100 hover:text-pink-200"
-            }
-            to={`/cart`}
-          >
-            <li className="inline-flex gap-x-2" key={"cart"}>
+          <li>
+            <NavLink
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "inline-flex gap-x-2 text-pink-200"
+                  : isPending
+                    ? "text-black-100"
+                    : "visited:text-visited inline-flex gap-x-2  text-black-100 hover:text-pink-200"
+              }
+              to={`/cart`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -131,8 +128,8 @@ const NavBar = () => {
                 />
               </svg>
               <span className="hidden md:flex">Cart</span>
-            </li>
-          </NavLink>
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </div>
